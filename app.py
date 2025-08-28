@@ -377,7 +377,7 @@ async def ping_gemini_pro(question_text, relevant_context="", max_tries=3):
                 ]
             }
             async with httpx.AsyncClient(timeout=200) as client:
-                response = await client.post("https://generativelanguage.googleapis.com/v1/models/gemini-2.5-pro:generateContent", headers=headers, json=payload)
+                response = await client.post("https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent", headers=headers, json=payload)
                 print(response)
                 
                 # Check if response is successful
@@ -1315,7 +1315,7 @@ async def extract_data_with_gemini_pro(base64_image: str, filename: str) -> str:
         
         async with httpx.AsyncClient(timeout=60) as client:
             response = await client.post(
-                "https://generativelanguage.googleapis.com/v1/models/gemini-2.5-pro:generateContent", 
+                "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent", 
                 headers=headers, 
                 json=payload
             )
