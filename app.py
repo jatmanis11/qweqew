@@ -94,7 +94,7 @@ open_ai_url = "https://aipipe.org/openai/v1/chat/completions"
 ocr_api_key = os.getenv("OCR_API_KEY")
 OCR_API_URL = "https://api.ocr.space/parse/image"
 gemini_api = os.getenv("gemini_api")
-GEMINI_API_URL =  f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key={gemini_api}"
+GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
 horizon_api = os.getenv("horizon_api")
 gemini_api_2 = os.getenv("gemini_api_2")
 grok_api = os.getenv("grok_api")
